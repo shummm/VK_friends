@@ -15,8 +15,7 @@ loaders.push({
 
 module.exports = {
     entry: {
-        main: './src/index.js',
-        friendFilter: './src/friendFilter.js'
+        main: './src/friendsFilter.js'
     },
     output: {
         filename: '[name].[hash].js',
@@ -27,23 +26,11 @@ module.exports = {
         loaders
     },
     plugins: [
-        // new webpack.optimize.UglifyJsPlugin({
-        //     sourceMap: true,
-        //     compress: {
-        //         drop_debugger: false
-        //     }
-        // }),
         new ExtractTextPlugin('styles.css'),
         new HtmlPlugin({
-            title: 'Main Homework',
+            title: 'VK_friends',
             template: 'index.hbs',
             chunks: ['main']
-        }),
-        new HtmlPlugin({
-            title: 'friendsFilter_VK',
-            template: 'friendFilter.hbs',
-            filename: 'friendFilter.html',
-            chunks: ['friendFilter']
         }),
         new CleanWebpackPlugin(['dist'])
     ]

@@ -1,4 +1,4 @@
-## LoftSchool example project
+## Фильтр с поиском друзей из VK (сохранение в Local Storage)
 
 ### Доступные команды
 
